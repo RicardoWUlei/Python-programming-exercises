@@ -42,7 +42,17 @@ for i in range(2000, 3201):
 print(','.join(l))
 ```
 
+Solution1：
+
+```python
+l = [str(x) for x in range(2000, 3201) if x%7==0 and x%5!=0]
+print(','.join(l))
+```
+
+>`str.join(seq)`: 将序列中的元素以指定的字符连接生成一个新的字符串.
+
 ### Question 2
+
 Level 1
 
 Question:
