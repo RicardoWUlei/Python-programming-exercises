@@ -10,5 +10,5 @@ def factorial_iteration(n) -> int:
         result *= i
     return result
 
-x = input()
+x = input() # take in console input
 print(factorial_iteration(int(x)))
