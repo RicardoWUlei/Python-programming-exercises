@@ -148,7 +148,12 @@ print(l)
 print(t)
 ```
 
+> `str.split()`对字符串进行分隔，返回值为list。
+>
+> `tuple()`可以用list初始化元组。
+
 ### Question 5
+
 Level 1
 
 Question:
