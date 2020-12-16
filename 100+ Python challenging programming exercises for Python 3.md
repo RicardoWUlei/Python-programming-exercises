@@ -114,7 +114,17 @@ for i in range(1,n+1):
 print(d)
 ```
 
+Solution1:
+
+```python
+n = int(input())
+l = [(i, i*i) for i in range(1,n+1)]
+d = dict(l)
+print(d)
+```
+
 ### Question 4
+
 Level 1
 
 Question:
