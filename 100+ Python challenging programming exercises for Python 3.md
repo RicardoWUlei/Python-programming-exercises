@@ -182,7 +182,10 @@ strObj.getString()
 strObj.printString()
 ```
 
+> 使用`__init__`初始化成员变量。
+
 ### Question 6
+
 Level 2
 
 Question:
@@ -214,7 +217,10 @@ for d in items:
 print(','.join(value))
 ```
 
+> 输出格式为逗号分隔的情况，就用join()
+
 ### Question 7
+
 Level 2
 
 Question:
