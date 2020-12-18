@@ -1,6 +1,5 @@
 import math
 
-
 def formula(D):
     C = 50
     H = 30
