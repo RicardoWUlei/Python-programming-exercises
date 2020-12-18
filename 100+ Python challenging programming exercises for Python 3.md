@@ -219,6 +219,21 @@ print(','.join(value))
 
 > 输出格式为逗号分隔的情况，就用join()
 
+My solution:
+
+```python
+import math
+
+def formula(D):
+    C = 50
+    H = 30
+    return str(int(round(math.sqrt((2*C*float(D)/H)))))
+
+seq = input()
+result = [formula(x) for x in seq.split(',')]
+print(','.join(result))
+```
+
 ### Question 7
 
 Level 2
