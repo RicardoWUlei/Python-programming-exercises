@@ -296,7 +296,12 @@ items.sort()
 print(','.join(items))
 ```
 
+> input()内嵌到列表生成式中
+>
+> list自带的inplace排序函数：`L.sort()`；也可以用`L = sorted(L)`
+
 ### Question 9
+
 Level 2
 
 Question£º
@@ -325,7 +330,11 @@ for sentence in lines:
     print(sentence)
 ```
 
+> 1. 也可以使用`L = list(map(str.upper, L))`对已有list进行大写操作。
+> 2. 对于input()读取操作，如何停止？EOF如何判断？
+
 ### Question 10
+
 Level 2
 
 Question:
