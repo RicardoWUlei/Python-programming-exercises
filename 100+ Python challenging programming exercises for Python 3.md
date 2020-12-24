@@ -338,7 +338,7 @@ for sentence in lines:
 Level 2
 
 Question:
-Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphabetically.
 Suppose the following input is supplied to the program:
 hello world and practice makes perfect and hello world again
 Then, the output should be:
@@ -355,7 +355,12 @@ words = [word for word in s.split(" ")]
 print(" ".join(sorted(list(set(words)))))
 ```
 
+> `sorted()`的参数也可以是`set`、`dict`。
+>
+> 输出的时候，和用逗号间隔是一样的。
+
 ### Question 11
+
 Level 2
 
 Question:
@@ -381,7 +386,26 @@ for p in items:
 print(','.join(value))
 ```
 
+My solution:
+
+```python
+def is_divisible_by5(item):
+    intp = int(item, 2)
+    if not intp%5:
+        return True
+    else:
+        return False
+
+x = [i for i in input().split(',')]
+print(','.join(filter(is_divisible_by5, x)))
+```
+
+> 使用filter函数进行筛选。
+>
+> 字符串转`int`，如果要选择`base`，可以选择第二个参数：`int(item, base)`
+
 ### Question 12
+
 Level 2
 
 Question:
@@ -401,7 +425,22 @@ for i in range(1000, 3001):
 print(",".join(values))
 ```
 
+My solution：
+
+```python
+def is_digit_even(item) -> bool:
+    for digit in item:
+        if int(digit) % 2:
+            return False
+    return True
+
+print(','.join(filter(is_digit_even, [str(i) for i in range(1000,3001)])))
+```
+
+> 使用`join()`函数中`Iterable`的元素类型必须为`str`。
+
 ### Question 13
+
 Level 2
 
 Question:
