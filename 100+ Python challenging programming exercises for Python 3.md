@@ -437,7 +437,7 @@ def is_digit_even(item) -> bool:
 print(','.join(filter(is_digit_even, [str(i) for i in range(1000,3001)])))
 ```
 
-> 使用`join()`函数中`Iterable`的元素类型必须为`str`。
+> `join()`函数中`Iterable`的元素类型必须为`str`。
 
 ### Question 13
 
@@ -469,7 +469,18 @@ print("LETTERS", d["LETTERS"])
 print("DIGITS", d["DIGITS"])
 ```
 
+My solution:
+
+```python
+x = input()
+print("LETTERS", len(list(filter(str.isalpha, x))))
+print("LETTERS", len(list(filter(str.isdigit, x))))
+```
+
+> 尽量减少for loop的使用，使用高级函数来实现简单的循环功能。
+
 ### Question 14
+
 Level 2
 
 Question:
@@ -498,7 +509,18 @@ print("UPPER CASE", d["UPPER CASE"])
 print("LOWER CASE", d["LOWER CASE"])
 ```
 
+My solution:
+
+```python
+x = input()
+print("UPPER CASE", len(list(filter(str.isupper, x))))
+print("LOWER CASE", len(list(filter(str.islower, x))))
+```
+
+> `filter`没有长度的概念，返回值是一个`iterator`，惰性运算。
+
 ### Question 15
+
 Level 2
 
 Question:
@@ -522,7 +544,17 @@ n4 = int( "%s%s%s%s" % (a,a,a,a) )
 print(n1+n2+n3+n4)
 ```
 
+My solution:
+
+```python
+a = input()
+print(int(a) + int(a*2) + int(a*3) + int(a*4))
+```
+
+> 字符串用惩罚就是复制为几份。
+
 ### Question 16
+
 Level 2
 
 Question:
