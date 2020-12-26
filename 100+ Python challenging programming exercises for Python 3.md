@@ -575,7 +575,17 @@ numbers = [x for x in values.split(",") if int(x)%2!=0]
 print(",".join(numbers))
 ```
 
+My solution:
+
+```python
+result = filter(lambda x:int(x) % 2 == 1, input().split(','))
+print(','.join(result))
+```
+
+> 使用lambda函数
+
 ### Question 17
+
 Level 2
 
 Question:
