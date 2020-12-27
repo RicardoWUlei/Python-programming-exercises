@@ -674,7 +674,9 @@ for p in items:
 print(",".join(value))
 ```
 
-> 正则表达式
+> 正则表达式，to-do
+>
+> `re.search()`
 
 ### Question 19
 
