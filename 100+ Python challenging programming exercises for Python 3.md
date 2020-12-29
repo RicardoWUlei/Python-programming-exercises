@@ -674,9 +674,8 @@ for p in items:
 print(",".join(value))
 ```
 
-> 正则表达式，to-do
+> 正则表达式 `re.search()`
 >
-> `re.search()`
 
 ### Question 19
 
@@ -699,12 +698,12 @@ Then, the output of the program should be:
 
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
-We use itemgetter to enable multiple sort keys.
+*We use itemgetter to enable multiple sort keys.*
 
 Solutions:
-from operator import itemgetter, attrgetter
 
 ```python
+from operator import itemgetter, attrgetter
 l = []
 while True:
     s = input()
