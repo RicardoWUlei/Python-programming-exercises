@@ -715,7 +715,25 @@ while True:
 print(sorted(l, key=itemgetter(0,1,2)))
 ```
 
+My solution:
+
+```python
+ls = []
+while True:
+    x = input()
+    ## No input
+    if not x:
+        break
+    info = x.split(',')
+    ls.append((info[0],info[1],info[2]))
+
+print(sorted(ls, key=lambda s: (s[0], s[1], s[2])))
+```
+
+> `sorted`排序中，`key`函数可以用多返回值表示多级排序。
+
 ### Question 20
+
 Level 3
 
 Question:

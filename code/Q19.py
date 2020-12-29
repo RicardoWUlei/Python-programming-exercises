@@ -7,4 +7,4 @@ while True:
     info = x.split(',')
     ls.append((info[0],info[1],info[2]))
 
-print(sorted(ls, key=itemgetter(0,1,2)))
+print(sorted(ls, key=lambda s: (s[0], s[1], s[2])))
