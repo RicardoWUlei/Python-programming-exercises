@@ -752,11 +752,24 @@ def putNumbers(n):
         if j%7==0:
             yield j
 
-for i in reverse(100):
+for i in putNumbers(100):
+    print(i)
+```
+
+ My solution:
+
+```python
+def genNumber(n):
+    for i in range(n):
+        if i % 7 == 0:
+            yield i
+
+for i in genNumber(100):
     print(i)
 ```
 
 ### Question 21
+
 Level 3
 
 Question
@@ -805,7 +818,35 @@ while True:
 print(int(round(math.sqrt(pos[1]**2+pos[0]**2))))
 ```
 
+My solution:
+
+```python
+import math
+
+count = [0 for i in range(4)]
+while True:
+    move = input()
+    if not move:
+        break
+    moves = move.split(" ")
+    if moves[0] == "UP":
+        count[0] += int(moves[1])
+    elif moves[0] == "DOWN":
+        count[1] += int(moves[1])
+    elif moves[0] == "LEFT":
+        count[2] += int(moves[1])
+    else:
+        count[3] += int(moves[1])
+
+diff_y = count[0] - count[1]
+diff_x = count[2] - count[3]
+print(round(math.sqrt(diff_x**2+diff_y**2)))
+```
+
+> round函数用于对于浮点数计算四舍五入值，第二参数表示小数点位数
+
 ### Question 22
+
 Level 3
 
 Question:
