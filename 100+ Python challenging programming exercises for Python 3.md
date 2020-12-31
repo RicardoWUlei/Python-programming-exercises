@@ -884,7 +884,12 @@ for w in words:
     print("%s:%d" % (w,freq[w]))
 ```
 
+> `dict.get(key, default=None)`：返回指定键的值，如果值不在字典中返回default值
+>
+> 直接对keys进行sort，然后顺序print
+
 ### Question 23
+
 level 1
 
 Question:
