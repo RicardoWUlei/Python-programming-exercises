@@ -937,7 +937,10 @@ def square(num):
 print(square(2))
 print(square.__doc__)
 ```
+> 函数的备注还是应该用多行注释写在函数名后。
+
 ### Question 25
+
 Level 1
 
 Question:
@@ -965,7 +968,8 @@ nico.name = "Nico"
 print("%s name is %s" % (Person.name, nico.name))
 ```
 
-### Question 26:
+### Question 26
+
 Define a function which can compute the sum of two numbers.
 
 Hints:
