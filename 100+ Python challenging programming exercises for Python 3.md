@@ -1030,7 +1030,7 @@ printValue("3","4") #34
 ```
 
 ### Question 31
-Define a function that can accept two strings as input and print the string with maximum length in console. If two strings have the same length, then the function should print al l strings line by line.
+Define a function that can accept two strings as input and print the string with maximum length in console. If two strings have the same length, then the function should print all strings line by line.
 
 Hints:
 
@@ -1068,7 +1068,7 @@ def checkValue(n):
         print("It is an odd number")
         
 checkValue(7)
-
+```
 ### Question 33
 Define a function which can print a dictionary where the keys are numbers between 1 and 3 (both included) and the values are square of keys.
 
@@ -1078,7 +1078,7 @@ Use dict[key]=value pattern to put entry into a dictionary.
 Use ** operator to get power of a number.
 
 Solution
-​```python
+```python
 def printDict():
     d=dict()
     d[1]=1
@@ -1088,7 +1088,21 @@ def printDict():
         
 printDict()
 ```
+
+My solution:
+
+```python
+def printDict():
+    dict1 = {a:a**2 for a in range(1,4)}
+    print(dict1)
+
+printDict()
+```
+
+> 使用dictionary comprehension生成
+
 ### Question 34
+
 Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys.
 
 Hints:
