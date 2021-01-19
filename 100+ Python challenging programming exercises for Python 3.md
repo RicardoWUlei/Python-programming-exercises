@@ -1278,7 +1278,18 @@ def printTuple():
 		
 printTuple()
 ```
+My solution:
+
+```python
+def  printTuple():
+    tuple1 = tuple([x**2 for x in range(1,21)])
+    print(tuple1)
+
+printTuple()
+```
+
 ### Question 42
+
 With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half values in one line. 
 
 Hints:
