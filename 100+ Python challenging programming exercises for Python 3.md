@@ -1413,7 +1413,7 @@ print(squaredNumbers)
 Define a class named American which has a static method called printNationality.
 
 Hints:
-Use @staticmethod decorator to define class static method.
+Use **@staticmethod** decorator to define class static method.
 
 Solution
 ```python
@@ -1427,7 +1427,16 @@ anAmerican.printNationality()
 American.printNationality()
 ```
 
+> 静态方法的decorator是`@staticmethod`
+>
+> 类的静态函数参数中不能含有`self`
+>
+> 静态函数的调用，对象和类都可以调用。
+>
+> 如果有重名的非静态函数，那么该静态函数会被覆盖。
+
 ### Question 51
+
 Define a class named American and its subclass NewYorker. 
 
 Hints:
