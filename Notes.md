@@ -1128,7 +1128,92 @@ My name is Michael.
 
 
 
-[to be continued](https://www.liaoxuefeng.com/wiki/1016959663602400/1017595944503424)
+## 错误、调试和测试
+
+如果错误是程序编写错误，也就是coder的问题 ，那就是bug，bug是必须修复的。
+
+如果是用户的输入造成的，那就让用户检查自己的输入
+
+如果是运行过程中无法预测的错误，成为异常，需要做异常处理。
+
+### 错误处理
+
+- 内置了一套`try...except...finally...`的错误处理机制
+- 当我们认为某些代码可能会出错时，就可以用`try`来运行这段代码，如果执行出错，则**后续代码不会继续执行**，而是直接跳转至错误处理代码，即`except`语句块，执行完`except`后，如果有`finally`语句块，则执行`finally`语句块。
+- 没有错误发生，所以`except`语句块不会被执行，但是`finally`如果有，则一定会被执行（可以没有`finally`语句）。
+- 一个`try`语句后，可以捕捉多个`exception`，按照排列的顺序依次检查，因此排列时应注意子类在前，大类在后，避免覆盖。
+- 同时 ，`try`语句中函数抛出的`exception`也可以检测到。
+- 对应的，如果错误没有被捕获，它就会一直往上抛，最后被Python解释器捕获，打印一个错误信息，然后程序退出。
+- 也可以自己接住`exception`，用`logging`记录错误信息，然后继续执行程序。
+
+```python
+import logging
+def main():
+    try:
+        bar('0')
+    except Exception as e:
+        logging.exception(e)
+```
+
+#### 主动抛出错误
+
+使用raise语句主动抛出错误。
+
+EX：
+
+```python
+# err_reraise.py
+
+def foo(s):
+    n = int(s)
+    if n==0:
+        raise ValueError('invalid value: %s' % s)
+    return 10 / n
+
+def bar():
+    try:
+        foo('0')
+    except ValueError as e:
+        print('ValueError!')
+        raise
+
+bar()
+```
+
+`except`接住错误后，接着`raise`。`raise`语句如果不带参数，就会把当前错误原样抛出。如果这个问题自己无法解决，就将问题继续向上一级抛。
+
+### 调试
+
+#### assert断言
+
+```python
+assert n != 0, 'n is zero!'
+## 等价于
+if not n != 0:
+    raise AssertionError('n is zero!')
+```
+
+如果此处表达式不为`True`，就`raise`一个`AssertionError`。
+
+#### logging
+
+类似于print，但是可以进行分组输出 ，也可以打印到文本中 。
+
+#### pdb
+
+Python的调试器，用参数`-m pdb`运行，单步运行程序，查看变量的状态。
+
+类似于Java的gdb调试器。
+
+#### IDE
+
+添加断点，进行调试。
+
+### 单元测试
+
+
+
+[to be continued](https://www.liaoxuefeng.com/wiki/1016959663602400/1017604210683936)
 
 
 
