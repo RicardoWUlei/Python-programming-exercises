@@ -1499,7 +1499,7 @@ print(aRectangle.area())
 ```
 
 ### Question 54
-Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+Define a class named **Shape** and its subclass **Square**. The Square class has an init function which takes a length as argument. Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
 
 Hints:
 
@@ -1526,7 +1526,31 @@ aSquare= Square(3)
 print(aSquare.area())
 ```
 
+My solution:
+
+```python
+class Shape(object):
+    def __init__(self):
+        pass
+    
+    def getArea(self):
+        return 0
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+    
+    def getArea(self):
+        return self.length*self.length
+
+shape = Shape()
+print(shape.getArea())
+square = Square(5)
+print(square.getArea())
+```
+
 ### Question 55
+
 Please raise a RuntimeError exception.
 
 Hints:
