@@ -1585,7 +1585,10 @@ finally:
     print('In finally block for cleanup')
 ```
 
+> `ZeroDivisionError` 除零的Error类
+
 ### Question 57
+
 Define a custom exception class which takes a string message as attribute.
 
 Hints:
