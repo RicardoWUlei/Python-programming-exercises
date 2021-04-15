@@ -1211,9 +1211,39 @@ Python的调试器，用参数`-m pdb`运行，单步运行程序，查看变量
 
 ### 单元测试
 
+TDD：Test-Driven Development
+
+编写单元测试时，我们需要编写一个测试类，从`unittest.TestCase`继承。
+
+编写测试方法要以test开头，然后使用`unittest`提供的内置函数进行条件判断：
+
+1. `self.assertEqual()`断言实际的结果和预期是否相等 
+2. `self.assertRaises(Error)`期待抛出指定类型的错误
+
+#### 运行单元测试的方法
+
+1.  程序内添加
+
+```python
+if __name__ == '__main__':
+    unittest.main()
+```
+
+2. 命令行添加参数`-m unittest`
+
+#### setUp和tearDown
+
+可以在单元测试中编写两个特殊的`setUp()`和`tearDown()`方法。这两个方法会分别在每调用一个测试方法的前后分别被执行。
+
+### 文档测试
+
+## IO编程
+
+操作IO的能力都是由操作系统提供的，每一种编程语言都会把操作系统提供的低级C接口封装起来方便使用，Python也不例外。
 
 
-[to be continued](https://www.liaoxuefeng.com/wiki/1016959663602400/1017604210683936)
+
+[to be continued](https://www.liaoxuefeng.com/wiki/1016959663602400/1017607179232640)
 
 
 
