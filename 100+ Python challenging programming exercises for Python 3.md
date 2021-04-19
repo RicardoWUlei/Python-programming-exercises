@@ -1593,7 +1593,7 @@ Define a custom exception class which takes a string message as attribute.
 
 Hints:
 
-To define a custom exception, we need to define a class inherited from Exception.
+To define a custom exception, we need to define a class inherited from `Exception`.
 
 Solution:
 ```python
@@ -1637,7 +1637,18 @@ r2 = re.match(pat2,emailAddress)
 print(r2.group(1))
 ```
 
+My solution:
+
+```python
+import re
+regex = re.compile(r"(.*)@.*\.com")
+input_msg = input("Type email address: ")
+result =  regex.match(input_msg)
+print(result.group(1))
+```
+
 ### Question 59
+
 Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the company name of a given email address. Both user names and company names are composed of letters only.
 
 Example:
