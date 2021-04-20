@@ -1715,7 +1715,7 @@ print(re.findall("\d+",s))
 
 Print a unicode string "hello world".
 
-Hints:
+**Hints:**
 
 Use u'strings' format to define unicode string.
 
@@ -1728,7 +1728,7 @@ print(unicodeString)
 ### Question 62
 Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
 
-Hints:
+**Hints:**
 
 Use unicode() function to convert.
 
@@ -1737,6 +1737,13 @@ Solution:
 s = input()
 u = unicode( s ,"utf-8")
 print(u)
+```
+
+My solution:
+
+```python
+s = input()
+print(s.encode("utf-8"))
 ```
 
 ### Question 63
