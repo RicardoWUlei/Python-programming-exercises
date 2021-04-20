@@ -1675,7 +1675,18 @@ r2 = re.match(pat2,emailAddress)
 print(r2.group(2))
 ```
 
+My solution:
+
+```python
+import re
+raw_input = input("Type in your email addreass: ")
+regex = re.compile(r"(\w*)@(\w*)\.com")
+result = regex.match(raw_input)
+print(result.group(2))
+```
+
 ### Question 60
+
 Write a program which accepts a sequence of words separated by whitespace as input to print the words composed of digits only.
 
 Example:
@@ -1689,9 +1700,9 @@ Then, the output of the program should be:
 
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-Hints:
+**Hints:**
 
-Use re.findall() to find all substring using regex.
+Use **re.findall()** to find all substring using regex.
 
 Solution:
 ```python
@@ -1701,6 +1712,7 @@ print(re.findall("\d+",s))
 ```
 
 ### Question 61
+
 Print a unicode string "hello world".
 
 Hints:
