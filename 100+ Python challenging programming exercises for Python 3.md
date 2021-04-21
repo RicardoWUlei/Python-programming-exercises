@@ -1822,7 +1822,10 @@ n=int(input())
 print(f(n))
 ```
 
+BTW, recursion is quite redundant and inefficient in this case. We can reach. to the formula of $f$ without recursion. 
+
 ### Question 66
+
 The Fibonacci Sequence is computed based on the following formula:
 
 f(n)=0 if n=0
@@ -1857,7 +1860,10 @@ n=int(input())
 print(f(n))
 ```
 
+Fibonacci sequence calculation can be fastened by DP.
+
 ### Question 67
+
 The Fibonacci Sequence is computed based on the following formula:
 
 f(n)=0 if n=0
@@ -1893,6 +1899,26 @@ def f(n):
 n=int(input())
 values = [str(f(x)) for x in range(0, n+1)]
 print(",".join(values))
+```
+
+My solution:
+
+```python
+def fib_tabulation(n):
+    if tabulation[n] == -1:
+        tabulation[n] = fib_tabulation(n-1) + fib_tabulation(n-2)
+        return tabulation[n]
+    else:
+        return tabulation[n]
+
+n = int(input())
+tabulation = [-1 for i in range(n+1)]
+## Base cases
+tabulation[0] = 0
+tabulation[1] = 1
+## DP
+fib_tabulation(n)
+print(','.join(map(str, tabulation)))
 ```
 
 ### Question 68
